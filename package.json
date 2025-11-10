@@ -1,0 +1,25 @@
+{
+  "name": "dev-planner",
+  "version": "1.0.0",
+  "description": "Plataforma Dev Planner - Organização de projetos acadêmicos com metodologia Kanban",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm --prefix server run dev",
+    "client": "npm --prefix client start",
+    "install-server": "npm --prefix server install",
+    "install-client": "npm --prefix client install",
+    "install-all": "npm run install-server && npm run install-client"
+  },
+  "keywords": [
+    "kanban",
+    "project-management",
+    "academic",
+    "education"
+  ],
+  "author": "EduTech Solutions",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

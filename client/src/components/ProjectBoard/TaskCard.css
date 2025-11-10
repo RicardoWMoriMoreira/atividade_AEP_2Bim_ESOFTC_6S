@@ -1,0 +1,126 @@
+.task-card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+  transition: transform 0.2s, box-shadow 0.2s;
+  user-select: none;
+  position: relative;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-card:active {
+  cursor: grabbing;
+}
+
+.task-card.dragging {
+  opacity: 0.8;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  background: #f8f9fa;
+  border: 2px solid #667eea;
+}
+
+.task-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.drag-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.drag-dots {
+  color: #999;
+  font-size: 1rem;
+  line-height: 1;
+  user-select: none;
+  transition: color 0.2s;
+}
+
+.task-card:hover .drag-dots {
+  color: #667eea;
+}
+
+.task-title {
+  margin: 0;
+  font-size: 1rem;
+  color: #2c3e50;
+  flex: 1;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.task-title:hover {
+  color: #667eea;
+}
+
+.task-content {
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+}
+
+.task-description {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+}
+
+.task-responsaveis {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.task-responsaveis strong {
+  display: block;
+  font-size: 0.75rem;
+  color: #999;
+  margin-bottom: 0.25rem;
+}
+
+.responsaveis-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.responsavel-tag {
+  background-color: #e8f4f8;
+  color: #3498db;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
